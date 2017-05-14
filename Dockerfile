@@ -5,7 +5,7 @@
 #
 
 FROM debian:jessie
-
+ENV PHP_EXTRA_CONFIGURE_ARGS="--enable-bcmath --enable-calendar --enable-dba --enable-exif --enable-mbregex --enable-shmop --enable-sockets --enable-sysvmsg --enable-sysvsem --enable-sysvshm --enable-wddx --enable-zip --with-mhash --enable-pcntl"
 # persistent / runtime deps
 ENV PHPIZE_DEPS \
 		autoconf \
@@ -45,7 +45,7 @@ ENV LDFLAGS="-Wl,-O1 -Wl,--hash-style=both"
 ENV GPG_KEYS A917B1ECDA84AEC2B568FED6F50ABC807BD5DCD0
 
 ENV PHP_VERSION 7.2.0-dev
-ENV PHP_URL="https://github.com/zendtech/php-src/tarball/jit-dynasm"
+ENV PHP_URL="https://github.com/zendtech/php-src/tarball/015bb16baaf9a3dae8f6143d19ea3db9069f827c"
 
 RUN set -xe; \
 	\
