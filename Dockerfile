@@ -5,7 +5,7 @@
 #
 
 FROM debian:jessie
-ENV PHP_EXTRA_CONFIGURE_ARGS="--enable-bcmath --enable-calendar --enable-dba --enable-exif --enable-mbregex --enable-shmop --enable-sockets --enable-sysvmsg --enable-sysvsem --enable-sysvshm --enable-wddx --enable-zip --with-mhash --enable-pcntl"
+
 # persistent / runtime deps
 ENV PHPIZE_DEPS \
 		autoconf \
