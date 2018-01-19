@@ -11,6 +11,9 @@ usage() {
 	echo
 	echo 'Possible values for module-name:'
 	echo $(find -maxdepth 1 -type f -name '*.so' -exec basename '{}' ';' | sort)
+	echo
+	echo 'Some of the above modules are already compiled into PHP; please check'
+	echo 'the output of "php -i" to see which modules are already loaded.'
 }
 
 opts="$(getopt -o 'h?' --long 'help,ini-name:' -- "$@" || { usage >&2 && false; })"
@@ -57,8 +60,25 @@ if [ -z "$modules" ]; then
 	exit 1
 fi
 
+pm='unknown'
+if [ -e /lib/apk/db/installed ]; then
+	pm='apk'
+fi
+
+apkDel=
+if [ "$pm" = 'apk' ]; then
+	if \
+		[ -n "$PHPIZE_DEPS" ] \
+		&& ! apk info --installed .phpize-deps > /dev/null \
+		&& ! apk info --installed .phpize-deps-configure > /dev/null \
+	; then
+		apk add --no-cache --virtual '.docker-php-ext-enable-deps' binutils
+		apkDel='.docker-php-ext-enable-deps'
+	fi
+fi
+
 for module in $modules; do
-	if nm -g "$module" | grep -q ' zend_extension_entry$'; then
+	if readelf --wide --syms "$module" | grep -q ' zend_extension_entry$'; then
 		# https://wiki.php.net/internals/extensions#loading_zend_extensions
 		line="zend_extension=$(readlink -f "$module")"
 	else
@@ -81,3 +101,7 @@ for module in $modules; do
 		echo "$line" >> "$ini"
 	fi
 done
+
+if [ "$pm" = 'apk' ] && [ -n "$apkDel" ]; then
+	apk del $apkDel
+fi

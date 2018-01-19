@@ -48,14 +48,14 @@ RUN mkdir -p $PHP_INI_DIR/conf.d
 # Enable linker optimization (this sorts the hash buckets to improve cache locality, and is non-default)
 # Adds GNU HASH segments to generated executables (this is used if present, and is much faster than sysv hash; in this configuration, sysv hash is also generated)
 # https://github.com/docker-library/php/issues/272
-ENV CFLAGS="-fstack-protector-strong -fpic -fpie -O2"
-ENV CPPFLAGS="$CFLAGS"
-ENV LDFLAGS="-Wl,-O1 -Wl,--hash-style=both"
+ENV PHP_CFLAGS="-fstack-protector-strong -fpic -fpie -O2"
+ENV PHP_CPPFLAGS="$PHP_CFLAGS"
+ENV PHP_LDFLAGS="-Wl,-O1 -Wl,--hash-style=both -pie"
 
 ENV GPG_KEYS A917B1ECDA84AEC2B568FED6F50ABC807BD5DCD0
 
 ENV PHP_VERSION 7.2.0-dev
-ENV PHP_URL="https://github.com/zendtech/php-src/tarball/jit-dynasm"
+ENV PHP_URL="https://github.com/zendtech/php-src/archive/jit-dynasm.tar.gz"
 
 RUN set -xe; \
 	\
@@ -97,6 +97,12 @@ RUN set -eux; \
 		${PHP_EXTRA_BUILD_DEPS:-} \
 	; \
 	rm -rf /var/lib/apt/lists/*; \
+	\
+	export \
+		CFLAGS="$PHP_CFLAGS" \
+		CPPFLAGS="$PHP_CPPFLAGS" \
+		LDFLAGS="$PHP_LDFLAGS" \
+	; \
 	docker-php-source extract; \
 	cd /usr/src/php; \
 	gnuArch="$(dpkg-architecture --query DEB_BUILD_GNU_TYPE)"; \
@@ -105,6 +111,7 @@ RUN set -eux; \
 	if [ ! -d /usr/include/curl ]; then \
 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; \
 	fi; \
+	./buildconf --force; \
 	./configure \
 		--build="$gnuArch" \
 		--with-config-file-path="$PHP_INI_DIR" \
