@@ -15,7 +15,8 @@ RUN set -eux; \
 		echo 'Pin-Priority: -1'; \
 	} > /etc/apt/preferences.d/no-debian-php
 
-# persistent / runtime deps
+# dependencies required for running "phpize"
+# (see persistent deps below)
 ENV PHPIZE_DEPS \
 		autoconf \
 		dpkg-dev \
@@ -26,6 +27,8 @@ ENV PHPIZE_DEPS \
 		make \
 		pkg-config \
 		re2c
+
+# persistent / runtime deps
 RUN apt-get update && apt-get install -y \
 		$PHPIZE_DEPS \
 		ca-certificates \
@@ -54,7 +57,7 @@ ENV PHP_LDFLAGS="-Wl,-O1 -Wl,--hash-style=both -pie"
 
 ENV GPG_KEYS A917B1ECDA84AEC2B568FED6F50ABC807BD5DCD0
 
-ENV PHP_VERSION 7.2.0-dev
+ENV PHP_VERSION 7.3.0-dev
 ENV PHP_URL="https://github.com/zendtech/php-src/archive/jit-dynasm.tar.gz"
 
 RUN set -xe; \
@@ -86,9 +89,10 @@ RUN set -eux; \
 	savedAptMark="$(apt-mark showmanual)"; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
-		libargon2-0-dev \
+		#libargon2-0-dev \
 		libcurl4-openssl-dev \
 		libedit-dev \
+		libsodium-dev \
 		libsqlite3-dev \
 		libssl-dev \
 		libxml2-dev \
@@ -96,6 +100,20 @@ RUN set -eux; \
 		bison \
 		${PHP_EXTRA_BUILD_DEPS:-} \
 	; \
+##<argon2>##
+	sed -e 's/stretch/buster/g' /etc/apt/sources.list > /etc/apt/sources.list.d/buster.list; \
+	{ \
+		echo 'Package: *'; \
+		echo 'Pin: release n=buster'; \
+		echo 'Pin-Priority: -10'; \
+		echo; \
+		echo 'Package: libargon2*'; \
+		echo 'Pin: release n=buster'; \
+		echo 'Pin-Priority: 990'; \
+	} > /etc/apt/preferences.d/argon2-buster; \
+	apt-get update; \
+	apt-get install -y --no-install-recommends libargon2-dev; \
+##</argon2>##
 	rm -rf /var/lib/apt/lists/*; \
 	\
 	export \
@@ -118,6 +136,11 @@ RUN set -eux; \
 		--with-config-file-scan-dir="$PHP_INI_DIR/conf.d" \
 		\
 		--disable-cgi \
+# make sure invalid --configure-flags are fatal errors intead of just warnings
+		--enable-option-checking=fatal \
+		\
+# https://github.com/docker-library/php/issues/439
+		--with-mhash \
 		\
 # --enable-ftp is included here because ftp_ssl_connect() needs ftp to be compiled statically (see https://github.com/docker-library/php/issues/236)
 		--enable-ftp \
@@ -127,6 +150,8 @@ RUN set -eux; \
 		--enable-mysqlnd \
 # https://wiki.php.net/rfc/argon2_password_hash (7.2+)
 		--with-password-argon2 \
+# https://wiki.php.net/rfc/libsodium
+		--with-sodium=shared \
 		\
 		--with-curl \
 		--with-libedit \
@@ -144,6 +169,10 @@ RUN set -eux; \
 	make install; \
 	find /usr/local/bin /usr/local/sbin -type f -executable -exec strip --strip-all '{}' + || true; \
 	make clean; \
+	\
+# https://github.com/docker-library/php/issues/692 (copy default example "php.ini" files somewhere easily discoverable)
+	cp -v php.ini-* "$PHP_INI_DIR/"; \
+	\
 	cd /; \
 	docker-php-source delete; \
 	\
@@ -167,6 +196,9 @@ RUN set -eux; \
 	rm -rf /tmp/pear ~/.pearrc
 
 COPY docker-php-ext-* docker-php-entrypoint /usr/local/bin/
+
+# sodium was built as a shared module (so that it can be replaced later if so desired), so let's enable it too (https://github.com/docker-library/php/issues/598)
+RUN docker-php-ext-enable sodium
 
 # TODO: uncomment and fix issue: "docker: Error response from daemon: OCI runtime create failed: container_linux.go:296: starting container process caused "exec: \"docker-php-entrypoint\": executable file not found in $PATH": unknown."
 #ENTRYPOINT ["docker-php-entrypoint"]
