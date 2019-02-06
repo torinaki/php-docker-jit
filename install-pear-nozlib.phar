@@ -1269,10 +1269,10 @@ if (extension_loaded('phar')) {if (isset($_SERVER) && isset($_SERVER['REQUEST_UR
 
 
 require_once 'phar://install-pear-nozlib.phar/index.php';
-__HALT_COMPILER();  F          install-pear-nozlib.phar       Archive/Tar.php'J ^\'J Ç=ím         Archive_Tar-1.4.4.tar ‡ ^\ ‡ {#¯m         Console/Getopt.phpâ4  ^\â4  XÖQ2m         Console_Getopt-1.4.1.tar t  ^\ t  ±Hßªm      	   index.php[+  ^\[+  ‰π≈6m         OS/Guess.php)  ^\)  =‡øCm         PEAR-1.10.7.tar . ^\ . ‹Oı
-m         PEAR.phpää  ^\ää  :—÷am         PEAR/ChannelFile.phpû«  ^\û«  Ñ)D;m         PEAR/ChannelFile/Parser.phpı  ^\ı  Áîfm         PEAR/Command.php˘0  ^\˘0  J}im         PEAR/Command/Common.php;   ^\;   ⁄Q>ˆm         PEAR/Command/Install.php€∆  ^\€∆  aJ,¢m         PEAR/Command/Install.xml~!  ^\~!  2°Vm         PEAR/Common.phpøh  ^\øh  ∆`Ü$m         PEAR/Config.phpd ^\d Ù±m         PEAR/Dependency2.php∂≈  ^\∂≈  ]©m         PEAR/DependencyDB.phpB^  ^\B^  hÏ6m         PEAR/Downloader.php4 ^\4 ûi∫ım         PEAR/Downloader/Package.php±* ^\±* ¥U∫m         PEAR/ErrorStack.php)Ñ  ^\)Ñ  «,Hm         PEAR/Frontend.php  ^\  zt†Pm         PEAR/Frontend/CLI.phpqd  ^\qd  ˙ ü˝m         PEAR/Installer.php‚ ^\‚ 6|lÇm         PEAR/Installer/Role.php*  ^\*  œt’∏m         PEAR/Installer/Role/Common.phpF  ^\F  õzµ±m         PEAR/Installer/Role/Data.php  ^\  ùùnm         PEAR/Installer/Role/Data.xmlí  ^\í  fçszm         PEAR/Installer/Role/Doc.php  ^\  ı"∫m         PEAR/Installer/Role/Doc.xmlë  ^\ë  h&P*m         PEAR/Installer/Role/Php.php  ^\  <á–Üm         PEAR/Installer/Role/Php.xml≠  ^\≠  zùqçm         PEAR/Installer/Role/Script.php  ^\  ÀÊ|>m         PEAR/Installer/Role/Script.xml∞  ^\∞  @vß–m         PEAR/Installer/Role/Test.php  ^\  daºkm         PEAR/Installer/Role/Test.xmlí  ^\í  B] m         PEAR/PackageFile.phpó>  ^\ó>  X€Ò¥m      !   PEAR/PackageFile/Generator/v1.phpB≈  ^\B≈  K&Øm      !   PEAR/PackageFile/Generator/v2.php5Ç  ^\5Ç  Óˇæ£m         PEAR/PackageFile/Parser/v1.php®@  ^\®@  ®·ñsm         PEAR/PackageFile/Parser/v2.phpé  ^\é  l≠q1m         PEAR/PackageFile/v1.php%∆  ^\%∆  çãh±m         PEAR/PackageFile/v2.phps ^\s GA»˘m      !   PEAR/PackageFile/v2/Validator.php|L ^\|L Üa⁄m         PEAR/Proxy.php  ^\  √+ôm         PEAR/Registry.php^* ^\^* '*Im         PEAR/REST.php>B  ^\>B  %ÓÅNm         PEAR/REST/10.phpˇ  ^\ˇ  û
-óGm         PEAR/Start.php:  ^\:  Æóm         PEAR/Start/CLI.phpTS  ^\TS  $\ÿdm         PEAR/Task/Common.phpC  ^\C  v`~?m         PEAR/Task/Postinstallscript.php¡9  ^\¡9  àœ⁄m      "   PEAR/Task/Postinstallscript/rw.php@  ^\@  Ä¬Ìm         PEAR/Task/Replace.php  ^\  ∂àXm         PEAR/Task/Replace/rw.php;  ^\;  ¡ÿÇm         PEAR/Task/Unixeol.php#	  ^\#	  °ü»Mm         PEAR/Task/Unixeol/rw.php@  ^\@  íönÖm         PEAR/Task/Windowseol.php	  ^\	  ˛]…ºm         PEAR/Task/Windowseol/rw.phpM  ^\M  7^m         PEAR/Validate.php>V  ^\>V  1ï\m         PEAR/Validator/PECL.php]  ^\]  K~m         PEAR/XMLParser.phpH  ^\H  Ω3m         Structures/Graph.phpi  ^\i  C}ü„m      ,   Structures/Graph/Manipulator/AcyclicTest.php  ^\  1Ù»¬m      2   Structures/Graph/Manipulator/TopologicalSorter.php  ^\  ¨v∞?m         Structures/Graph/Node.phpj+  ^\j+  ]#çim         Structures_Graph-1.1.1.tar 6 ^\ 6 Ôéj·m      
-   System.phpúP  ^\úP  c£¨m         XML/Util.php™}  ^\™}  ˇfìm         XML_Util-1.4.3.tar 8 ^\ 8 ¸km      <?php
+__HALT_COMPILER();  F          install-pear-nozlib.phar       Archive/Tar.php'J §ØZ\'J Ç=ím         Archive_Tar-1.4.4.tar ‡ §ØZ\ ‡ {#¯m         Console/Getopt.phpC5  §ØZ\C5  %∫¢5∂         Console_Getopt-1.4.1.tar t  §ØZ\ t  ±Hßªm      	   index.php[+  §ØZ\[+  ‰π≈6m         OS/Guess.php)  §ØZ\)  =‡øCm         PEAR-1.10.7.tar . §ØZ\ . ‹Oı
+m         PEAR.phpää  §ØZ\ää  :—÷am         PEAR/ChannelFile.phpû«  §ØZ\û«  Ñ)D;m         PEAR/ChannelFile/Parser.phpı  §ØZ\ı  Áîfm         PEAR/Command.php˘0  §ØZ\˘0  J}im         PEAR/Command/Common.php;   §ØZ\;   ⁄Q>ˆm         PEAR/Command/Install.php€∆  §ØZ\€∆  aJ,¢m         PEAR/Command/Install.xml~!  §ØZ\~!  2°Vm         PEAR/Common.phpøh  §ØZ\øh  ∆`Ü$m         PEAR/Config.phpd §ØZ\d Ù±m         PEAR/Dependency2.php∂≈  §ØZ\∂≈  ]©m         PEAR/DependencyDB.phpB^  §ØZ\B^  hÏ6m         PEAR/Downloader.php4 §ØZ\4 ûi∫ım         PEAR/Downloader/Package.php±* §ØZ\±* ¥U∫m         PEAR/ErrorStack.php)Ñ  §ØZ\)Ñ  «,Hm         PEAR/Frontend.php  §ØZ\  zt†Pm         PEAR/Frontend/CLI.phpqd  §ØZ\qd  ˙ ü˝m         PEAR/Installer.php‚ §ØZ\‚ 6|lÇm         PEAR/Installer/Role.php*  §ØZ\*  œt’∏m         PEAR/Installer/Role/Common.phpF  §ØZ\F  õzµ±m         PEAR/Installer/Role/Data.php  §ØZ\  ùùnm         PEAR/Installer/Role/Data.xmlí  §ØZ\í  fçszm         PEAR/Installer/Role/Doc.php  §ØZ\  ı"∫m         PEAR/Installer/Role/Doc.xmlë  §ØZ\ë  h&P*m         PEAR/Installer/Role/Php.php  §ØZ\  <á–Üm         PEAR/Installer/Role/Php.xml≠  §ØZ\≠  zùqçm         PEAR/Installer/Role/Script.php  §ØZ\  ÀÊ|>m         PEAR/Installer/Role/Script.xml∞  §ØZ\∞  @vß–m         PEAR/Installer/Role/Test.php  §ØZ\  daºkm         PEAR/Installer/Role/Test.xmlí  §ØZ\í  B] m         PEAR/PackageFile.phpó>  §ØZ\ó>  X€Ò¥m      !   PEAR/PackageFile/Generator/v1.phpB≈  §ØZ\B≈  K&Øm      !   PEAR/PackageFile/Generator/v2.php5Ç  §ØZ\5Ç  Óˇæ£m         PEAR/PackageFile/Parser/v1.php®@  §ØZ\®@  ®·ñsm         PEAR/PackageFile/Parser/v2.phpé  §ØZ\é  l≠q1m         PEAR/PackageFile/v1.php%∆  §ØZ\%∆  çãh±m         PEAR/PackageFile/v2.phps §ØZ\s GA»˘m      !   PEAR/PackageFile/v2/Validator.php|L §ØZ\|L Üa⁄m         PEAR/Proxy.php  §ØZ\  √+ôm         PEAR/Registry.php^* §ØZ\^* '*Im         PEAR/REST.php>B  §ØZ\>B  %ÓÅNm         PEAR/REST/10.phpˇ  §ØZ\ˇ  û
+óGm         PEAR/Start.php:  §ØZ\:  Æóm         PEAR/Start/CLI.phpTS  §ØZ\TS  $\ÿdm         PEAR/Task/Common.phpC  §ØZ\C  v`~?m         PEAR/Task/Postinstallscript.php¡9  §ØZ\¡9  àœ⁄m      "   PEAR/Task/Postinstallscript/rw.php@  §ØZ\@  Ä¬Ìm         PEAR/Task/Replace.php  §ØZ\  ∂àXm         PEAR/Task/Replace/rw.php;  §ØZ\;  ¡ÿÇm         PEAR/Task/Unixeol.php#	  §ØZ\#	  °ü»Mm         PEAR/Task/Unixeol/rw.php@  §ØZ\@  íönÖm         PEAR/Task/Windowseol.php	  §ØZ\	  ˛]…ºm         PEAR/Task/Windowseol/rw.phpM  §ØZ\M  7^m         PEAR/Validate.php>V  §ØZ\>V  1ï\m         PEAR/Validator/PECL.php]  §ØZ\]  K~m         PEAR/XMLParser.phpH  §ØZ\H  Ω3m         Structures/Graph.phpi  §ØZ\i  C}ü„m      ,   Structures/Graph/Manipulator/AcyclicTest.php  §ØZ\  1Ù»¬m      2   Structures/Graph/Manipulator/TopologicalSorter.php  §ØZ\  ¨v∞?m         Structures/Graph/Node.phpj+  §ØZ\j+  ]#çim         Structures_Graph-1.1.1.tar 6 §ØZ\ 6 Ôéj·m      
+   System.phpúP  §ØZ\úP  c£¨m         XML/Util.php™}  §ØZ\™}  ˇfìm         XML_Util-1.4.3.tar 8 §ØZ\ 8 ¸km      <?php
 /* vim: set expandtab tabstop=4 shiftwidth=4 softtabstop=4: */
 
 /**
@@ -7197,25 +7197,22 @@ How it works :
 /**
  * PHP Version 5
  *
- * Copyright (c) 1997-2004 The PHP Group
+ * Copyright (c) 2001-2015, The PEAR developers
  *
- * This source file is subject to version 3.0 of the PHP license,
+ * This source file is subject to the BSD-2-Clause license,
  * that is bundled with this package in the file LICENSE, and is
  * available through the world-wide-web at the following url:
- * http://www.php.net/license/3_0.txt.
- * If you did not receive a copy of the PHP license and are unable to
- * obtain it through the world-wide-web, please send a note to
- * license@php.net so we can mail you a copy immediately.
+ * http://opensource.org/licenses/bsd-license.php.
  *
  * @category Console
  * @package  Console_Getopt
  * @author   Andrei Zmievski <andrei@php.net>
- * @license  http://www.php.net/license/3_0.txt PHP 3.0
+ * @license  http://opensource.org/licenses/bsd-license.php BSD-2-Clause
  * @version  CVS: $Id$
  * @link     http://pear.php.net/package/Console_Getopt
  */
 
-require_once 'phar://install-pear-nozlib.phar/' . 'PEAR.php';
+require_once 'PEAR.php';
 
 /**
  * Command-line options parsing class.
@@ -7223,7 +7220,7 @@ require_once 'phar://install-pear-nozlib.phar/' . 'PEAR.php';
  * @category Console
  * @package  Console_Getopt
  * @author   Andrei Zmievski <andrei@php.net>
- * @license  http://www.php.net/license/3_0.txt PHP 3.0
+ * @license  http://opensource.org/licenses/bsd-license.php BSD-2-Clause
  * @link     http://pear.php.net/package/Console_Getopt
  */
 class Console_Getopt
@@ -7325,8 +7322,8 @@ class Console_Getopt
             }
         }
 
-        reset($args);
-        while (list($i, $arg) = each($args)) {
+        for ($i = 0; $i < count($args); $i++) {
+            $arg = $args[$i];
             /* The special element '--' means explicit end of
                options. Treat the rest of the arguments as non-options
                and end the loop. */
@@ -7342,6 +7339,7 @@ class Console_Getopt
                 $error = Console_Getopt::_parseLongOption(substr($arg, 2),
                                                           $long_options,
                                                           $opts,
+                                                          $i,
                                                           $args,
                                                           $skip_unknown);
                 if (PEAR::isError($error)) {
@@ -7355,6 +7353,7 @@ class Console_Getopt
                 $error = Console_Getopt::_parseShortOption(substr($arg, 1),
                                                            $short_options,
                                                            $opts,
+                                                           $i,
                                                            $args,
                                                            $skip_unknown);
                 if (PEAR::isError($error)) {
@@ -7372,12 +7371,13 @@ class Console_Getopt
      * @param string     $arg           Argument
      * @param string[]   $short_options Available short options
      * @param string[][] &$opts
-     * @param string[]   &$args
+     * @param int        &$argIdx
+     * @param string[]   $args
      * @param boolean    $skip_unknown suppresses Console_Getopt: unrecognized option
      *
      * @return void
      */
-    protected static function _parseShortOption($arg, $short_options, &$opts, &$args, $skip_unknown)
+    protected static function _parseShortOption($arg, $short_options, &$opts, &$argIdx, $args, $skip_unknown)
     {
         for ($i = 0; $i < strlen($arg); $i++) {
             $opt     = $arg{$i};
@@ -7407,7 +7407,8 @@ class Console_Getopt
                     if ($i + 1 < strlen($arg)) {
                         $opts[] = array($opt,  substr($arg, $i + 1));
                         break;
-                    } else if (list(, $opt_arg) = each($args)) {
+                    } else if (isset($args[++$argIdx])) {
+                        $opt_arg = $args[$argIdx];
                         /* Else use the next argument. */;
                         if (Console_Getopt::_isShortOpt($opt_arg)
                             || Console_Getopt::_isLongOpt($opt_arg)) {
@@ -7457,11 +7458,12 @@ class Console_Getopt
      * @param string     $arg          Argument
      * @param string[]   $long_options Available long options
      * @param string[][] &$opts
-     * @param string[]   &$args
+     * @param int        &$argIdx
+     * @param string[]   $args
      *
      * @return void|PEAR_Error
      */
-    protected static function _parseLongOption($arg, $long_options, &$opts, &$args, $skip_unknown)
+    protected static function _parseLongOption($arg, $long_options, &$opts, &$argIdx, $args, $skip_unknown)
     {
         @list($opt, $opt_arg) = explode('=', $arg, 2);
 
@@ -7502,9 +7504,12 @@ class Console_Getopt
                 if (substr($long_opt, -2) != '==') {
                     /* Long option requires an argument.
                        Take the next argument if one wasn't specified. */;
-                    if (!strlen($opt_arg) && !(list(, $opt_arg) = each($args))) {
-                        $msg = "Console_Getopt: option requires an argument --$opt";
-                        return PEAR::raiseError($msg);
+                    if (!strlen($opt_arg)) {
+                        if (!isset($args[++$argIdx])) {
+                            $msg = "Console_Getopt: option requires an argument --$opt";
+                            return PEAR::raiseError($msg);
+                        }
+                        $opt_arg = $args[$argIdx];
                     }
 
                     if (Console_Getopt::_isShortOpt($opt_arg)
@@ -7551,7 +7556,8 @@ class Console_Getopt
         return $argv;
     }
 
-}package.xml                                                                                         0000644 0001750 0000144 00000015121 12553254770 012556  0                                                                                                    ustar   cweiske                         users                                                                                                                                                                                                                  <?xml version="1.0" encoding="UTF-8"?>
+}
+package.xml                                                                                         0000644 0001750 0000144 00000015121 12553254770 012556  0                                                                                                    ustar   cweiske                         users                                                                                                                                                                                                                  <?xml version="1.0" encoding="UTF-8"?>
 <package packagerversion="1.9.4" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0 http://pear.php.net/dtd/tasks-1.0.xsd http://pear.php.net/dtd/package-2.0 http://pear.php.net/dtd/package-2.0.xsd">
  <name>Console_Getopt</name>
  <channel>pear.php.net</channel>
@@ -98818,4 +98824,4 @@ class XML_Util
     }
 }
 ?>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Ö“˘˙Ûú´ùA„në=µÖMR¢q   GBMB
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           ”‚¶nM€™0ºñù-‘êIÁ∑•   GBMB
