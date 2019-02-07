@@ -6,10 +6,13 @@ the [tweet](https://mobile.twitter.com/dr4goonis/status/806817526097346560) that
 
 This image is based on experimental branch: https://github.com/zendtech/php-src/tree/jit-dynasm
 
-You can read more about JIT support in internals mail list (https://externals.io/message/103903) or review change in related pull request (https://github.com/php/php-src/pull/3792).
+You can read more about JIT support in internals mail list (https://externals.io/message/103903) or review changes in related pull request (https://github.com/php/php-src/pull/3792).
 
-
-**NOT PRODUCTION READY** this branch is still experimental and far from stability. Use it on your own risk
+To get latest image you should run:
+```bash
+docker push dmitrybalabka/php-jit:latest
+```
+Docker hub link: https://cloud.docker.com/u/dmitrybalabka/repository/docker/dmitrybalabka/php-jit
 
 Code is a copy-paste of [docker/php](https://github.com/docker-library/php) builder with slight additions to be able to compile
 git-based version of php.
