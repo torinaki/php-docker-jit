@@ -1,8 +1,13 @@
-PHP docker image with experimental jit support
+PHP 8 with experimental JIT support docker image 
 ===
 
-This code is a helper to try out the php with experimental jit support. It was written as a pet project inspired by
+This code is a helper to try out the PHP with experimental JIT support. It was written as a pet project inspired by
 the [tweet](https://mobile.twitter.com/dr4goonis/status/806817526097346560) that states 54% performance improvement.
+
+This image is based on experimental branch: https://github.com/zendtech/php-src/tree/jit-dynasm
+
+You can read more about JIT support in internals mail list (https://externals.io/message/103903) or review change in related pull request (https://github.com/php/php-src/pull/3792).
+
 
 **NOT PRODUCTION READY** this branch is still experimental and far from stability. Use it on your own risk
 
