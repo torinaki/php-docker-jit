@@ -130,6 +130,8 @@ RUN set -eux; \
 	if [ ! -d /usr/include/curl ]; then \
 		ln -sT "/usr/include/$debMultiarch/curl" /usr/local/include/curl; \
 	fi; \
+# FIXES: https://github.com/torinaki/php-docker-jit/issues/1
+    sed -i -e 's#^PEAR_INSTALLER_URL.*$#PEAR_INSTALLER_URL = https://github.com/pear/pearweb_phars/raw/v1.10.12/install-pear-nozlib.phar#' ./pear/Makefile.frag; \
 	./buildconf --force; \
 	./configure \
 		--build="$gnuArch" \
@@ -158,8 +160,6 @@ RUN set -eux; \
 		--with-libedit \
 		--with-openssl \
 		--with-zlib \
-# Disabled until https://github.com/pear/Console_Getopt/pull/3
-		--without-pear \
 		\
 # bundled pcre does not support JIT on s390x
 # https://manpages.debian.org/stretch/libpcre3-dev/pcrejit.3.en.html#AVAILABILITY_OF_JIT_SUPPORT
@@ -195,7 +195,6 @@ RUN set -eux; \
 	php --version; \
 	\
 # https://github.com/docker-library/php/issues/443
-# Disabled until https://github.com/pear/Console_Getopt/pull/3
 #	pecl update-channels; \
 	rm -rf /tmp/pear ~/.pearrc
 
