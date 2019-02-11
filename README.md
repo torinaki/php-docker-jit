@@ -10,7 +10,7 @@ You can read more about JIT support in internals mail list (https://externals.io
 
 To get latest image you should run:
 ```bash
-docker push dmitrybalabka/php-jit:latest
+docker pull dmitrybalabka/php-jit:latest
 ```
 Docker hub link: https://cloud.docker.com/u/dmitrybalabka/repository/docker/dmitrybalabka/php-jit
 
