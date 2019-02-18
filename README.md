@@ -1,4 +1,4 @@
-PHP 8 with experimental JIT support docker image 
+PHP 7.4 with experimental JIT support docker image 
 ===
 
 This code is a helper to try out the PHP with experimental JIT support. It was written as a pet project inspired by
@@ -10,7 +10,7 @@ You can read more about JIT support in internals mail list (https://externals.io
 
 To get latest image you should run:
 ```bash
-docker pull dmitrybalabka/php-jit:latest
+docker pull dmitrybalabka/php-jit:latest-7.4
 ```
 Docker hub link: https://cloud.docker.com/u/dmitrybalabka/repository/docker/dmitrybalabka/php-jit
 
