@@ -99,6 +99,7 @@ RUN set -eux; \
 		zlib1g-dev \
 		libwebp-dev \
 		bison \
+		libonig-dev \
 		${PHP_EXTRA_BUILD_DEPS:-} \
 	; \
 ##<argon2>##
