@@ -58,7 +58,7 @@ ENV PHP_LDFLAGS="-Wl,-O1 -Wl,--hash-style=both -pie"
 ENV GPG_KEYS A917B1ECDA84AEC2B568FED6F50ABC807BD5DCD0
 
 ENV PHP_VERSION 7.4.0-dev
-ENV PHP_URL="https://github.com/zendtech/php-src/archive/jit-dynasm.tar.gz"
+ENV PHP_URL="https://github.com/zendtech/php-src/archive/jit-dynasm-7.4.tar.gz"
 
 RUN set -xe; \
 	\
